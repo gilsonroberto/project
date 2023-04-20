@@ -19,6 +19,7 @@ const Profile = () => {
   return (
     <div>
       <h2>Olá esse é o componente profile</h2>
+      <h2> É possivel trabalhar com token em qualquer componente {auth.token}</h2>
       
       <Button type='primary' onClick={handleLogout}>
         Log out

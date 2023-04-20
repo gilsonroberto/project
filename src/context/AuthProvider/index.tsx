@@ -17,7 +17,7 @@ export const AuthProvider = ({children}: IAuthProvider) => {
   }, [])
   
 
-   const authenticate = async (email: string, password: string) => {
+  const authenticate = async (email: string, password: string) => {
     const response = await LoginRequest(email, password)
 
     const payload = { token: response.token, email }
@@ -26,15 +26,7 @@ export const AuthProvider = ({children}: IAuthProvider) => {
     setUserLocalStorage(payload);
   }
 
-  // async function authenticate (email: string, password: string) {
-  //   const response = await LoginRequest(email, password)
-
-  //   const payload = { token: response.token, email }
-
-  //   setUser(payload);
-  // }
-
-  function logout () {
+  const logout = () => {
     setUser(null);
     setUserLocalStorage(null);
 
