@@ -1,0 +1,10 @@
+{
+  "extends": ["react-app", "plugin:@typescript-eslint/recommended"],
+  "plugins": ["@typescript-eslint"],
+  "parser": "@typescript-eslint/parser",
+  "rules": {
+    "@typescript-eslint/explicit-module-boundary-types": "off",
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "warn"
+  }
+}
